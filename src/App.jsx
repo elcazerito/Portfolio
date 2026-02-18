@@ -1,35 +1,47 @@
 import './App.css'
+import VideoCard from './Card';
 
 function App() {
+  const rmtext = (
+    <>
+      L'entreprise RMBestmedia avait besoin d'une animation 3D de son logo. J'ai d'abord dû
+      re-modéliser le logo de l'entreprise, puis j'ai
+      fait une animation de rotation simple et j'ai ensuite fait du{" "}
+      <span className="italic relative group">
+        shading
+        <span className="absolute bottom-6 left-0 hidden group-hover:block bg-gray-800 text-white text-sm p-2 rounded-lg shadow-lg w-80">
+          Changement des textures et couleurs pour donner le visuel souhaité.
+        </span>
+      </span>{" "}
+      pour donner cet aspect final.
+    </>
+  );
+  const agtext = (
+    <>
+      L'entreprise AG Coaching avait besoin d'une animation 3D de son logo. J'ai d'abord du
+      re-modéliser le logo de l'entreprise, puis j'ai fait une animation à base de rotations
+      et de translations. Dans cette mission je n'ai pas eu a faire de shading pour cette mission.
+    </>
+  );
+  const griffetext = (
+    <>
+      Concernant cette animation, il s'agissait d'une animation 3D pour fêter l'anniversaire d'un 
+      homme qui m'a beaucoup aidé pour apprendre la modélisation 3D.
+      Ce projet a été réalisé quand j'étais encore débutant en modélisation 3D, 
+      même si je me considère encore comme débutant.
+      J'ai du réaliser ce projet en deux jours seulement car je n'ai appris son anniversaire que 
+      l'avant-veille, ce qui explique certains problèmes de shading notamment.
+    </>
+  );
+
 
   return (
     <>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-        <div className='justify-center flex flex-col items-center'>
-          <h4 className='text-xl font-bold mb-2'>Title</h4>
-          <h5 className='text-xl font-bold mb-2'>Society</h5>
-          <p className='mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse natus officia rem repellendus nesciunt voluptas tempore tenetur aspernatur consequuntur sint nihil deleniti hic, explicabo, nisi impedit deserunt, repudiandae minima!</p>
-          <button className='bg-blue-500 text-white px-4 py-2 rounded-xl transform transition-transform duration-300 hover:scale-110 hover:bg-blue-700 w-auto'
-            id='switch-video'>Changer l'arrière-plan</button>
-          <div className='flex justify-center items-center my-8'>
-            <div className='w-3/4 max-w-lg mx-auto'>
-              <div id='video'>
-                <video id='video-element' className='w-full rounded-lg shadow-md'
-                  src='medias/RM Bestmedia white background format 10801920.mp4'></video>
-              </div>
-              <div className='flex justify-center mt-4 space-x-4'>
-                <button id='play-button'
-                  className='bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600'>
-                  Lecture
-                </button>
-                <button id='pause-button'
-                  className='bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600'>
-                  Pause
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h1 className='text-center text-2xl font-black mb-16'>Modélisation 3D</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
+        <VideoCard title="Modélisateur & Animateur 3D" society="RM Bestmedia" text={rmtext} bg={true} video="RM Bestmedia white background format 10801920.mp4" />
+        <VideoCard title="Modélisateur & Animateur 3D" society="AG.Coaching" text={agtext} video="AG Project.mp4" />
+        <VideoCard title="Animation pour un anniversaire" society="GriffeFX" text={griffetext} video="Anniversaire_GriffeFX_2023.mp4" />
       </div>
     </>
   )
