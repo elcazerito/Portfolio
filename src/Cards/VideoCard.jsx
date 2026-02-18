@@ -35,7 +35,7 @@ function VideoCard({ title, society, text, video, bg = false }) {
                             key={currentVideo}
                             ref={videoRef}
                             className="w-full rounded-lg shadow-md"
-                            src={`public/medias/${currentVideo}`}
+                            src={`medias/${currentVideo}`}
                         />
                     </div>
                     <div className='flex justify-center mt-4 space-x-4'>
