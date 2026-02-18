@@ -1,5 +1,6 @@
 import './App.css'
-import VideoCard from './Card';
+import VideoCard from './Cards/VideoCard';
+import IFrameCard from './Cards/IFrameCard';
 
 function App() {
   const rmtext = (
@@ -25,18 +26,31 @@ function App() {
   );
   const griffetext = (
     <>
-      Concernant cette animation, il s'agissait d'une animation 3D pour fêter l'anniversaire d'un 
+      Concernant cette animation, il s'agissait d'une animation 3D pour fêter l'anniversaire d'un
       homme qui m'a beaucoup aidé pour apprendre la modélisation 3D.
-      Ce projet a été réalisé quand j'étais encore débutant en modélisation 3D, 
+      Ce projet a été réalisé quand j'étais encore débutant en modélisation 3D,
       même si je me considère encore comme débutant.
-      J'ai du réaliser ce projet en deux jours seulement car je n'ai appris son anniversaire que 
+      J'ai du réaliser ce projet en deux jours seulement car je n'ai appris son anniversaire que
       l'avant-veille, ce qui explique certains problèmes de shading notamment.
+    </>
+  );
+  const obbotext = (
+    <>
+      Obbo est un site développé en HTML/CSS/JS compatible avec le RGPD qui
+      permet d'afficher sa localisation et de prendre des selfies.
+      <br />Attention, ce site n'est pas responsive, il est donc vivement conseillé pour
+      l'expérience utilisateur de le lancer au format mobile ou sur téléphone.
     </>
   );
 
 
   return (
     <>
+      <h1 className='text-center text-2xl font-black mb-16'>Développement web</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
+        <IFrameCard title="Obbo" text={obbotext} link="https://elcazerito.github.io/Obbo"/>
+      </div>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'></div>
       <h1 className='text-center text-2xl font-black mb-16'>Modélisation 3D</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
         <VideoCard title="Modélisateur & Animateur 3D" society="RM Bestmedia" text={rmtext} bg={true} video="RM Bestmedia white background format 10801920.mp4" />
