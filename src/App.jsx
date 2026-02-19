@@ -45,19 +45,17 @@ function App() {
 
 
   return (
-    <div className='p-2 rainbow-colors min-h-screen min-w-screen size-full'>
-      <div className='bg-white rounded-lg'>
-        <h1 className='text-center text-2xl font-black mb-16'>Développement web</h1>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
-          <IFrameCard title="Obbo" text={obbotext} link="https://elcazerito.github.io/Obbo" />
-        </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'></div>
-        <h1 className='text-center text-2xl font-black mb-16'>Modélisation 3D</h1>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
-          <VideoCard title="Modélisateur & Animateur 3D" society="RM Bestmedia" text={rmtext} bg={true} video="RM Bestmedia white background format 10801920.mp4" />
-          <VideoCard title="Modélisateur & Animateur 3D" society="AG.Coaching" text={agtext} video="AG Project.mp4" />
-          <VideoCard title="Animation pour un anniversaire" society="GriffeFX" text={griffetext} video="Anniversaire_GriffeFX_2023.mp4" />
-        </div>
+    <div className='bg-white rounded-lg'>
+      <h1 className='text-center text-2xl font-black mb-16'>Développement web</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
+        <IFrameCard title="Obbo" text={obbotext} link="https://elcazerito.github.io/Obbo"/>
+      </div>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'></div>
+      <h1 className='text-center text-2xl font-black mb-16'>Modélisation 3D</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
+        <VideoCard title="Modélisateur & Animateur 3D" society="RM Bestmedia" text={rmtext} bg={true} video="RM Bestmedia white background format 10801920.mp4" />
+        <VideoCard title="Modélisateur & Animateur 3D" society="AG.Coaching" text={agtext} video="AG Project.mp4" />
+        <VideoCard title="Animation pour un anniversaire" society="GriffeFX" text={griffetext} video="Anniversaire_GriffeFX_2023.mp4" />
       </div>
     </div>
   )

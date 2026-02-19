@@ -1,0 +1,17 @@
+body{
+    background-attachment: fixed;
+    background: linear-gradient(45deg, 
+        #00ffff, #ff8000, #fd1d1d, #833ab4, #00ffff, 
+        #ff8000, #fd1d1d, #833ab4, #00ffff);
+    background-size: 300% 300%;
+    animation: movingBackground 8s infinite linear;
+}
+
+@keyframes movingBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
