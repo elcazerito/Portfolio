@@ -45,7 +45,7 @@ function App() {
 
 
   return (
-    <div className='p-2 rainbow-colors min-h-screen size-full'>
+    <div className='p-2 rainbow-colors min-h-screen min-w-screen size-full'>
       <div className='bg-white rounded-lg'>
         <h1 className='text-center text-2xl font-black mb-16'>Développement web</h1>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16'>
