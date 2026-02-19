@@ -7,7 +7,7 @@ function IFrameCard({ title, text, link }) {
             <p className='mb-2'>{text}</p>
             <button
                 className="text-center text-white red-bg p-0.5 px-4 m-2 rounded-lg"
-                onClick={() => window.location.href = { link }}>
+                onClick={() => window.location.href =  link }>
                 Y aller
             </button>
             <iframe
